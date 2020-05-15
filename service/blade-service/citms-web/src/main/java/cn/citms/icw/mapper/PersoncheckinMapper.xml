@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.citms.icw.mapper.PersoncheckinMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="personcheckinResultMap" type="cn.citms.icw.entity.Personcheckin">
+        <id column="id" property="id"/>
+        <result column="xm" property="xm"/>
+        <result column="xbdm" property="xbdm"/>
+        <result column="csrq" property="csrq"/>
+        <result column="rylx" property="rylx"/>
+        <result column="ry_bs" property="ryBs"/>
+        <result column="lxfs" property="lxfs"/>
+        <result column="sjhm" property="sjhm"/>
+        <result column="mzdm" property="mzdm"/>
+        <result column="whcddm" property="whcddm"/>
+        <result column="hyzkdm" property="hyzkdm"/>
+        <result column="cyzjlxdm" property="cyzjlxdm"/>
+        <result column="zjhm" property="zjhm"/>
+        <result column="gjdm" property="gjdm"/>
+        <result column="gjdz" property="gjdz"/>
+        <result column="jgmc" property="jgmc"/>
+        <result column="hjdz_xzqhdm" property="hjdzXzqhdm"/>
+        <result column="hjdz_dzmc" property="hjdzDzmc"/>
+        <result column="blsj" property="blsj"/>
+        <result column="yhbs" property="yhbs"/>
+        <result column="ypzgxdm" property="ypzgxdm"/>
+        <result column="jzsy" property="jzsy"/>
+        <result column="jzfs_mc" property="jzfsMc"/>
+        <result column="jz_qx" property="jzQx"/>
+        <result column="rz_rqsj" property="rzRqsj"/>
+        <result column="cl_rqsj" property="clRqsj"/>
+        <result column="cc_rqsj" property="ccRqsj"/>
+        <result column="zylbdm" property="zylbdm"/>
+        <result column="zdry_pdbs" property="zdryPdbs"/>
+        <result column="jjlxr_xm" property="jjlxrXm"/>
+        <result column="jjlxr_lxdh" property="jjlxrLxdh"/>
+        <result column="fk_xm" property="fkXm"/>
+        <result column="fk_sjhm" property="fkSjhm"/>
+        <result column="fwsy_jyqk" property="fwsyJyqk"/>
+        <result column="fw_rqsj" property="fwRqsj"/>
+        <result column="fwry_xm" property="fwryXm"/>
+        <result column="unit_id" property="unitId"/>
+        <result column="house_id" property="houseId"/>
+        <result column="building_id" property="buildingId"/>
+        <result column="community_id" property="communityId"/>
+        <result column="fwdw" property="fwdw"/>
+        <result column="zzcs" property="zzcs"/>
+    </resultMap>
+
+
+    <select id="selectPersoncheckinPage" resultMap="personcheckinResultMap">
+        select * from sq_personcheckin where is_deleted = 0
+    </select>
+
+</mapper>

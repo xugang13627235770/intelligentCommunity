@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.citms.icw.mapper.CommunityMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="communityResultMap" type="cn.citms.icw.entity.Community">
+        <id column="id" property="id"/>
+        <result column="xqmc" property="xqmc"/>
+        <result column="xqbm" property="xqbm"/>
+        <result column="xq_bs" property="xqBs"/>
+        <result column="xqdz" property="xqdz"/>
+        <result column="jlxmc" property="jlxmc"/>
+        <result column="sqlx" property="sqlx"/>
+        <result column="jcnf" property="jcnf"/>
+        <result column="cjsj" property="cjsj"/>
+        <result column="zdmj" property="zdmj"/>
+        <result column="csqdm" property="csqdm"/>
+        <result column="csq_mc" property="csqMc"/>
+        <result column="sqjcwhmc" property="sqjcwhmc"/>
+        <result column="sdm" property="sdm"/>
+        <result column="sf_mc" property="sfMc"/>
+        <result column="qxdm" property="qxdm"/>
+        <result column="qxmc" property="qxmc"/>
+        <result column="shdm" property="shdm"/>
+        <result column="smc" property="smc"/>
+        <result column="xzjddm" property="xzjddm"/>
+        <result column="xzjdmc" property="xzjdmc"/>
+        <result column="ssxq" property="ssxq"/>
+        <result column="zqmj" property="zqmj"/>
+        <result column="jwsrs" property="jwsrs"/>
+        <result column="sszrqdm" property="sszrqdm"/>
+        <result column="fwcs" property="fwcs"/>
+        <result column="dqjd" property="dqjd"/>
+        <result column="dqwd" property="dqwd"/>
+        <result column="wymc" property="wymc"/>
+        <result column="wyfzr" property="wyfzr"/>
+        <result column="fwzmc" property="fwzmc"/>
+        <result column="fwzrs" property="fwzrs"/>
+    </resultMap>
+
+
+    <select id="selectCommunityPage" resultMap="communityResultMap">
+        select * from sq_community where is_deleted = 0
+    </select>
+
+</mapper>

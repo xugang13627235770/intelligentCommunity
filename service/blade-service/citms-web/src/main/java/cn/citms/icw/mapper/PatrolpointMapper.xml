@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.citms.icw.mapper.PatrolpointMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="patrolpointResultMap" type="cn.citms.icw.entity.Patrolpoint">
+        <id column="id" property="id"/>
+        <result column="communityId" property="communityId"/>
+        <result column="deviceNo" property="deviceNo"/>
+        <result column="pointNumber" property="pointNumber"/>
+        <result column="pointName" property="pointName"/>
+        <result column="dqjd" property="dqjd"/>
+        <result column="dqwd" property="dqwd"/>
+    </resultMap>
+
+
+    <select id="selectPatrolpointPage" resultMap="patrolpointResultMap">
+        select * from sq_patrolpoint where is_deleted = 0
+    </select>
+
+</mapper>

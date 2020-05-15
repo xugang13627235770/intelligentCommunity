@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.citms.icw.mapper.PatroltaskMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="patroltaskResultMap" type="cn.citms.icw.entity.Patroltask">
+        <id column="id" property="id"/>
+        <result column="communityId" property="communityId"/>
+        <result column="name" property="name"/>
+        <result column="phone" property="phone"/>
+        <result column="idCard" property="idCard"/>
+        <result column="deviceNo" property="deviceNo"/>
+    </resultMap>
+
+
+    <select id="selectPatroltaskPage" resultMap="patroltaskResultMap">
+        select * from sq_patroltask where is_deleted = 0
+    </select>
+
+</mapper>

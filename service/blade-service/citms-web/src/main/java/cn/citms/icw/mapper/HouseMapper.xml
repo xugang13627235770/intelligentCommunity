@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.citms.icw.mapper.HouseMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="houseResultMap" type="cn.citms.icw.entity.House">
+        <id column="id" property="id"/>
+        <result column="fw_bh" property="fwBh"/>
+        <result column="fw_dm" property="fwDm"/>
+        <result column="fw_bs" property="fwBs"/>
+        <result column="fw_zt" property="fwZt"/>
+        <result column="fw_lx" property="fwLx"/>
+        <result column="fangwu_dzmc" property="fangwuDzmc"/>
+        <result column="jzmj_mjpfm" property="jzmjMjpfm"/>
+        <result column="sz_lch" property="szLch"/>
+        <result column="fwyt_jyqk" property="fwytJyqk"/>
+        <result column="jzry_sl" property="jzrySl"/>
+        <result column="wtdlr_xm" property="wtdlrXm"/>
+        <result column="wtdlr_zjlxmc" property="wtdlrZjlxmc"/>
+        <result column="wtdlr_zjhm" property="wtdlrZjhm"/>
+        <result column="wtdlr_lxdh" property="wtdlrLxdh"/>
+        <result column="syq_lx" property="syqLx"/>
+        <result column="zdfw_pdbs" property="zdfwPdbs"/>
+        <result column="zl_zt" property="zlZt"/>
+        <result column="jzzz_pdbs" property="jzzzPdbs"/>
+        <result column="rz_rqsj" property="rzRqsj"/>
+        <result column="gq_rqsj" property="gqRqsj"/>
+        <result column="unit_id" property="unitId"/>
+        <result column="building_id" property="buildingId"/>
+        <result column="community_id" property="communityId"/>
+        <result column="fjId" property="fjId"/>
+    </resultMap>
+
+
+    <select id="selectHousePage" resultMap="houseResultMap">
+        select * from sq_house where is_deleted = 0
+    </select>
+
+</mapper>

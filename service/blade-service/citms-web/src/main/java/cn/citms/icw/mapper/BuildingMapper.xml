@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.citms.icw.mapper.BuildingMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="buildingResultMap" type="cn.citms.icw.entity.Building">
+        <id column="id" property="id"/>
+        <result column="jzdm_id" property="jzdmId"/>
+        <result column="jz_bm" property="jzBm"/>
+        <result column="jzwmc" property="jzwmc"/>
+        <result column="mh_sl" property="mhSl"/>
+        <result column="ldh_mc" property="ldhMc"/>
+        <result column="ld_bs" property="ldBs"/>
+        <result column="jz_xz" property="jzXz"/>
+        <result column="xj_rqsj" property="xjRqsj"/>
+        <result column="zzdy_sl" property="zzdySl"/>
+        <result column="dm_cs" property="dmCs"/>
+        <result column="dx_cs" property="dxCs"/>
+        <result column="mjpfm" property="mjpfm"/>
+        <result column="px_bh" property="pxBh"/>
+        <result column="smrzss_yxq" property="smrzssYxq"/>
+        <result column="dxcjz_cs" property="dxcjzCs"/>
+        <result column="cjsj" property="cjsj"/>
+        <result column="gxsj" property="gxsj"/>
+        <result column="jdwd_xxqk" property="jdwdXxqk"/>
+        <result column="community_id" property="communityId"/>
+        <result column="dqjd" property="dqjd"/>
+        <result column="dqwd" property="dqwd"/>
+    </resultMap>
+
+
+    <select id="selectBuildingPage" resultMap="buildingResultMap">
+        select * from sq_building where is_deleted = 0
+    </select>
+
+</mapper>
